@@ -17,6 +17,7 @@
 </head>
 
 <body>
+		
     <div data-role="page" id="foo" >
         <div data-role="header" data-position="fixed" data-tap-toggle="false" >
             <h1>Navigation application</h1>
@@ -25,13 +26,12 @@
         </div><!-- /header -->
 
         <div data-role="content" >
-        <div id="video-junk"></div>
         
             <ul id="tizen-filelist" data-role="listview" style="margin-top: 0;" >
 
                     </ul>
         </div><!-- /content -->
-
+		
         <div data-role="footer" data-id="fool" data-position="fixed" data-tap-toggle="false" >
             <!-- <div data-role="navbar">
                 <ul>
@@ -43,5 +43,14 @@
              
         </div><!-- /footer -->
     </div><!-- /page -->
+    		
+    		<div data-role="page" id="dialogPage">
+  			<div data-role="header">
+    			<h2>Media preview</h2>
+  			</div>
+  			<div role="main" class="ui-content">
+    			<div id="video-junk"></div>
+  			</div>
+		</div>
 </body>
 </html>

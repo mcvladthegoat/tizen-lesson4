@@ -1,2 +1,9 @@
 body {
 }
+#tizen-player{
+	width:95%;
+	height: auto;
+}
+#video-junk{
+	text-align: center;
+}

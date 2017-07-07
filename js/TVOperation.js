@@ -16,7 +16,6 @@ function setFocusElement(e) {
 			
 			$("#video-junk").empty().append("<video id='tizen-player'><source src='" + filePath + "' type='video/" + ext + "'></video>");
 			document.getElementById("tizen-player").play();
-			document.getElementById("tizen-player").requestFullscreen();
             break;
         case TvKeyCode.KEY_UP:
 			if(mainfocus < item_count + 1 && mainfocus > 0){
@@ -65,6 +64,12 @@ function setFocusElement(e) {
 			break;
 		case TvKeyCode.KEY_PLAY:
 			document.getElementById("tizen-player").play();
+			break;
+		case TvKeyCode.KEY_PREVIOUS:
+			document.getElementById("tizen-player").pause();
+			break;
+		case 10009:
+			document.getElementById("tizen-player").pause();
 			break;
     }
 }
@@ -128,7 +133,7 @@ $(document).ready(function(){
 		 
 		 for(var i=0; i<files.length;i++){
 			 console.log(files[i].name);
-			 $("#tizen-filelist").append("<li id='li"+ i +"'><a id='id"+ i +"' href='#' file-path='"+ files[i].fullPath +"'>"+files[i].name+"</a></li>").listview('refresh');
+			 $("#tizen-filelist").append("<li id='li"+ i +"'><a id='id"+ i +"' href='#dialogPage' data-rel='dialog' file-path='"+ files[i].fullPath +"'>"+files[i].name+"</a></li>").listview('refresh');
 //			 item_count++;
 		 }
 		 console.log(files);
